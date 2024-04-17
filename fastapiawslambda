@@ -1,0 +1,14 @@
+leo@leo-Lenovo-V310-14IKB:~/Documentos/AWS Lambda code$ python3 -m venv env
+leo@leo-Lenovo-V310-14IKB:~/Documentos/AWS Lambda code$ source env/bin/activate
+(env) leo@leo-Lenovo-V310-14IKB:~/Documentos/AWS Lambda code$ pip install fastapi uvicorn mangum
+pip freeze > requirements.txt
+
+pip3 install -t dependencies -r requirements.txt
+
+pip freeze > requirements.txt
+
+(cd dependencies && zip -r ../aws_lambda_artifact.zip .)
+
+zip aws_lambda_artifact.zip -u main.py
+
+
